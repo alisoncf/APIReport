@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>:@title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>:@head</h1>
+    	:@table1
+	<table>
+	<th>
+	<td>Coluna 1</td>
+	<td>Coluna 2</td>
+	</th>
+		<tr>
+		<td>:#nome</td>
+		<td>:#telefone</td>
+		</tr>
+	</table>
+	</body>
+</html>
+
+
+{
+	"@head":"Teste de Cabeçalho",
+	"@title":"Teste de Título",
+	"@table1":
+		[
+			"id":"1","nome":"João","telefone":"(xxx)999999",
+			"id":"2","nome":"Pedro","telefone":"(62)33333333"
+		]
+}
+
