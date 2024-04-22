@@ -17,19 +17,19 @@ public class testes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Par par = new Par("Valor",1.78, null);
-        
-        
-        System.out.println( par.toJason() );
-        
-        String j = "{" + util.Util.EntreAspas("id") + " : 1.78}";
-        
-        par = par.toPar(j);
-        
-        System.out.println(par);
-        
-        System.out.println( par.toJason() );
-        
+//        Par par = new Par();
+//        
+//        
+//        System.out.println( par.toJason() );
+//        
+//        String j = "{" + util.Util.EntreAspas("id") + " : 1.78}";
+//        
+//        par = par.toPar(j);
+//        
+//        System.out.println(par);
+//        
+//        System.out.println( par.toJason() );
+//        
     }
     
     

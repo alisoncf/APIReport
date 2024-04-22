@@ -20,19 +20,19 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Administrador
  */
-public class Util {
+public class Restful {
 
     public static String chaveMD5 = "abe6db4c9f5484fae8d79f2e868a673c";
     public static String _AD = "\"";
-    
+   
 
-    public final void Response200Json(HttpServletResponse response, Object object) throws IOException {
+    public final void ResponseJson(HttpServletResponse response,
+            Object object, HttpStatus status) throws IOException {
         response.setContentType("text/json;charset=UTF-8");
 
         try (PrintWriter out = response.getWriter()) {
-            response.setStatus(200);
+            response.setStatus(status.getCode());
            
-            
             out.println(new Gson().toJson(object));
         }
     }
@@ -96,15 +96,15 @@ public class Util {
                     }
                 }
             } catch (NoSuchMethodException ex) {
-                Logger.getLogger(Util.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Restful.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SecurityException ex) {
-                Logger.getLogger(Util.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Restful.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IllegalAccessException ex) {
-                Logger.getLogger(Util.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Restful.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IllegalArgumentException ex) {
-                Logger.getLogger(Util.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Restful.class.getName()).log(Level.SEVERE, null, ex);
             } catch (InvocationTargetException ex) {
-                Logger.getLogger(Util.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Restful.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
