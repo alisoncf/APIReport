@@ -29,6 +29,7 @@ public class Restful {
     public final void ResponseJson(HttpServletResponse response,
             Object object, HttpStatus status) throws IOException {
         response.setContentType("text/json;charset=UTF-8");
+        response.setHeader("Access-Control-Allow-Methods", "*");
 
         try (PrintWriter out = response.getWriter()) {
             response.setStatus(status.getCode());
